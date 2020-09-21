@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h3 class="text-center title">Movie History</h3>
+<hr class="line-blue">
+<section id="show-history">
+    <div class="container text-center">
+        {% for movie in movies_seen %}
+        <div class="movie-box">
+            <p>{{ movie }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+<section id="section4">
+    <div class="container media">
+        <img src="{{url_for('static', filename='Interstellar.jpg')}}" class="align-self-center mr-3 rounded-circle" />
+        <div class="media-body">
+            <h5>Interstellar</h5>
+            <hr class="line-grey">
+            <p>
+                Interstellar is a 2014 epic science fiction film directed, co-written and produced by Christopher Nolan.
+                It stars Matthew McConaughey, Anne Hathaway, Jessica Chastain, Bill Irwin, Ellen Burstyn, John Lithgow,
+                Matt Damon, and Michael Caine. Set in a dystopian future where humanity is struggling to survive, the
+                film follows a group of astronauts who travel through a wormhole near Saturn in search of a new home for
+                mankind.
+            </p>
+        </div>
+    </div>
+</section>
+{% endblock %}

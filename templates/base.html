@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"
+        integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous">
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #263238 !important;
+        }
+
+        .title {
+            color: white;
+            margin: 1% 0%;
+        }
+
+        .line-grey {
+            border: 1px solid #263238;
+        }
+
+        .line-blue {
+            border: 1px solid #607D8B;
+        }
+
+        .line-large-blue {
+            border: 5px solid #607D8B;
+        }
+
+        #section1,
+        #section2,
+        #section4 {
+            background-color: #607D8B;
+            color: white;
+            margin: 1% 0%;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            margin: 2px 0px;
+        }
+
+        .half {
+            background-color: #607D8B;
+            color: white;
+        }
+
+        .btn {
+            border-color: white !important;
+            color: white !important;
+            margin-top: 30px;
+        }
+
+        .btn:hover {
+            background-color: white;
+            color: #263238 !important;
+            transition: 0.5s ease;
+        }
+
+        #footer {
+            color: white;
+            margin-top: 50px;
+        }
+
+        #section4 h5 {
+            margin-top: 2%;
+        }
+
+        .movie-box {
+            border: 1px solid #607D8B;
+            margin: 1% 0%;
+            padding-top: 1%;
+        }
+
+        .movie-box:hover {
+            border: 5px solid #607D8B;
+            transition: 0.5s ease;
+        }
+
+        #insert-user {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+                rgba(0, 0, 0, 0.7)),
+            url("{{url_for('static', filename='TheDarkKnight.jpg')}}");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 240px 0px;
+            color: white;
+        }
+
+        #connect-user {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+                rgba(0, 0, 0, 0.7)),
+            url("{{url_for('static', filename='AvengersEndgame.jpg')}}");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 240px 0px;
+            color: white;
+        }
+
+        #search-movie {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+                rgba(0, 0, 0, 0.7)),
+            url("{{url_for('static', filename='Inception.jpg')}}");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 240px 0px;
+            color: white;
+        }
+
+        #show-history {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+                rgba(0, 0, 0, 0.7)),
+            url("{{url_for('static', filename='Interstellar.jpg')}}");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 240px 0px;
+            color: white;
+        }
+
+        #insert-movie {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+                rgba(0, 0, 0, 0.7)),
+            url("{{url_for('static', filename='LordOfTheRings.jpg')}}");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 240px 0px;
+            color: white;
+        }
+
+        #update-movie {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+                rgba(0, 0, 0, 0.7)),
+            url("{{url_for('static', filename='StarWars.jpg')}}");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 240px 0px;
+            color: white;
+        }
+
+        #make-admin {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+                rgba(0, 0, 0, 0.7)),
+            url("{{url_for('static', filename='TheMatrix.jpg')}}");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 240px 0px;
+            color: white;
+        }
+    </style>
+
+    <title>InfoCinemas</title>
+</head>
+
+<body>
+    <h1 class="text-center title">Info Cinemas</h1>
+    <hr class="line-large-blue">
+    {% block content %}
+    <h2 class="text-center title">Upcomming Movies</h3>
+
+        <hr class="line-blue">
+
+        <div id="section1">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/AZGcmvrTX9M"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="text-center title">Tenet</h3>
+                        <hr class="line-grey">
+                        <p">
+                            Tenet is a 2020 spy film written and directed by Christopher Nolan, who produced it with
+                            Emma
+                            Thomas. A
+                            co-production between the United Kingdom and United States, it stars John David Washington,
+                            Robert
+                            Pattinson, Elizabeth Debicki, Dimple Kapadia, Michael Caine, and Kenneth Branagh. The plot
+                            follows a
+                            secret agent (Washington) as he manipulates the flow of time to prevent World War III.
+                            </p>
+                            <img class="img-responsive" src="{{url_for('static', filename='Tenet1.jpg')}}">
+                            <img class="img-responsive" src="{{url_for('static', filename='Tenet2.jpg')}}">
+                            <img class="img-responsive" src="{{url_for('static', filename='Tenet3.jpg')}}">
+                            <img class="img-responsive" src="{{url_for('static', filename='Tenet4.jpg')}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="section2">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 class="text-center title">The Batman</h3>
+                        <hr class="line-grey">
+                        <p>
+                            The Batman is an upcoming American superhero film based on the DC Comics character of the
+                            same
+                            name.
+                            Produced by DC Films and distributed by Warner Bros. Pictures, it is a reboot of the Batman
+                            film
+                            franchise. The film is directed by Matt Reeves, who wrote the screenplay with Peter Craig.
+                            It
+                            stars
+                            Robert Pattinson as Bruce Wayne / Batman, with Zoë Kravitz, Paul Dano, Jeffrey Wright, John
+                            Turturro,
+                            Peter Sarsgaard, Barry Keoghan, Jayme Lawson, Andy Serkis, and Colin Farrell rounding out
+                            the
+                            ensemble
+                            cast. The Batman is set during Batman's second year of fighting crime and follows him as he
+                            explores
+                            Gotham City's corruption and faces the Riddler, a riddle-obsessed serial killer.
+                        </p>
+                        <img class="img-responsive" src="{{url_for('static', filename='TheBatman1.jpg')}}">
+                        <img class="img-responsive" src="{{url_for('static', filename='TheBatman2.jpg')}}">
+                        <img class="img-responsive" src="{{url_for('static', filename='TheBatman3.jpg')}}">
+                        <img class="img-responsive" src="{{url_for('static', filename='TheBatman4.jpg')}}">
+                    </div>
+                    <div class="col-md-6 embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/NLOp_6uPccQ"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="section3" class="text-center">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 half">
+                        <h3 class="text-center title">About Us</h3>
+                        <hr class="line-grey">
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus vero beatae quos magnam,
+                            sed dolor minus cupiditate pariatur iusto dolore optio consectetur tenetur incidunt eveniet
+                            suscipit? Dolorum dignissimos quisquam cumque?
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="text-center title">Sign In</h3>
+                        <hr class="line-blue">
+                        <a href="insertuser" class="btn">Sign In</a>
+                        <a href="connectuser" class="btn">Log In</a>
+                        <p id="footer">Created By T.Rokas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h3 class="text-center title">Insert Movie</h3>
+<hr class="line-blue">
+<section id="insert-movie">
+    <div class="container text-center">
+        <form method="post">
+            <div class="form-group">
+                <input type="text" class="form-control" id="title" name="title" placeholder="Title">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="year" name="year" placeholder="Year">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="description" name="description" placeholder="Description">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="dates" name="dates" placeholder="Dates">
+            </div>
+            <button type="submit" class="btn">Insert</button>
+        </form>
+    </div>
+</section>
+<section id="section4">
+    <div class="container media">
+        <img src="{{url_for('static', filename='LordOfTheRings.jpg')}}" class="align-self-center mr-3 rounded-circle">
+        <div class="media-body">
+            <h5>Lord Of The Rings: The Return Of The King</h5>
+            <hr class="line-grey">
+            <p>
+                The Lord of the Rings: The Return of the King is a 2003 epic fantasy adventure film directed by Peter
+                Jackson, based on the third volume of J. R. R. Tolkien's The Lord of the Rings. The film is the final
+                instalment in the Lord of the Rings trilogy and was produced by Barrie M. Osborne, Jackson and Fran
+                Walsh, and written by Walsh, Philippa Boyens and Jackson. The film features an ensemble cast including
+                Elijah Wood, Ian McKellen, Liv Tyler, Viggo Mortensen, Sean Astin, Cate Blanchett, John Rhys-Davies,
+                Bernard Hill, Billy Boyd, Dominic Monaghan, Orlando Bloom, Hugo Weaving, Miranda Otto, David Wenham,
+                Karl Urban, John Noble, Andy Serkis, Ian Holm, and Sean Bean. It was preceded by The Fellowship of the
+                Ring (2001) and The Two Towers (2002).
+            </p>
+        </div>
+    </div>
+</section>
+{% endblock %}

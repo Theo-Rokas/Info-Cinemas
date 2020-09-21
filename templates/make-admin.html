@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h3 class="text-center title">Make Admin</h3>
+<hr class="line-blue">
+<section id="make-admin">
+    <div class="container text-center">
+        <form method="post">
+            <div class="form-group">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+            </div>
+            <button type="submit" class="btn">Make</button>
+        </form>
+    </div>
+</section>
+<section id="section4">
+    <div class="container media">
+        <img src="{{url_for('static', filename='TheMatrix.jpg')}}" class="align-self-center mr-3 rounded-circle" />
+        <div class="media-body">
+            <h5>The Matrix</h5>
+            <hr class="line-grey">
+            <p>
+                The Matrix is a 1999 American science fiction action film[3][4] written and directed by the
+                Wachowskis.[a] It stars Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss, Hugo Weaving, and Joe
+                Pantoliano and is the first installment in the Matrix franchise. It depicts a dystopian future in which
+                humanity is unknowingly trapped inside a simulated reality, the Matrix, created by intelligent machines
+                to distract humans while using their bodies as an energy source.[5] When computer programmer Thomas
+                Anderson, under the hacker alias "Neo", uncovers the truth, he "is drawn into a rebellion against the
+                machines"[5] along with other people who have been freed from the Matrix.
+            </p>
+        </div>
+    </div>
+</section>
+{% endblock %}

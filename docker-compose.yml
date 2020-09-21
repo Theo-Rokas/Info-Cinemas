@@ -1,0 +1,22 @@
+version: "2"
+services:
+  flask:
+    build: .
+    restart: always
+    container_name: flask
+    command: python -u app.py
+    ports:
+      - "5000:5000"
+    links:
+      - mongodb
+    environment:
+      - "MONGO_HOSTNAME=mongodb"
+
+  mongodb:
+    image: mongo
+    restart: always
+    container_name: mongodb
+    ports:
+      - 27017:27017
+    volumes:
+      - ./mongodb/data:/data/db

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h3 class="text-center title">Connect User</h3>
+<hr class="line-blue">
+<section id="connect-user">
+    <div class="container text-center">
+        <form method="post">
+            <div class="form-group">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+            </div>
+            <button type="submit" class="btn">Connect</button>
+        </form>
+    </div>
+</section>
+<section id="section4">
+    <div class="container media">
+        <img src="{{url_for('static', filename='AvengersEndgame.jpg')}}" class="align-self-center mr-3 rounded-circle">
+        <div class="media-body">
+            <h5>Avengers Endgame</h5>
+            <hr class="line-grey">
+            <p>
+                Avengers: Endgame is a 2019 American superhero film based on the Marvel Comics superhero team the
+                Avengers, produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures. It is the
+                direct sequel to Avengers: Infinity War (2018) and the 22nd film in the Marvel Cinematic Universe (MCU).
+                The film was directed by Anthony and Joe Russo and written by Christopher Markus and Stephen McFeely,
+                and features an ensemble cast including Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth,
+                Scarlett Johansson, Jeremy Renner, Don Cheadle, Paul Rudd, Brie Larson, Karen Gillan, Danai Gurira,
+                Benedict Wong, Jon Favreau, Bradley Cooper, Gwyneth Paltrow, and Josh Brolin. In the film, the surviving
+                members of the Avengers and their allies attempt to reverse the damage caused by Thanos in Infinity War.
+            </p>
+        </div>
+    </div>
+</section>
+{% endblock %}

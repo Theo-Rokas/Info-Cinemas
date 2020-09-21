@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h3 class="text-center title">Update Movie</h3>
+<hr class="line-blue">
+<section id="update-movie">
+    <div class="container text-center">
+        <form method="post">
+            <div class="form-group">
+                <input type="text" class="form-control" id="title" name="title" placeholder="Title" />
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="year" name="year" placeholder="Year" />
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="description" name="description" placeholder="Description" />
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="dates" name="dates" placeholder="Dates" />
+            </div>
+            <button type="submit" class="btn">Update</button>
+        </form>
+    </div>
+</section>
+<section id="section4">
+    <div class="container media">
+        <img src="{{url_for('static', filename='StarWars.jpg')}}" class="align-self-center mr-3 rounded-circle" />
+        <div class="media-body">
+            <h5>Star Wars Episode V: The Empire Strikes Back</h5>
+            <hr class="line-grey">
+            <p>
+                The Empire Strikes Back, also known as Star Wars: Episode V – The Empire
+                Strikes Back, is a 1980 American epic space opera film directed by Irvin
+                Kershner and written by Leigh Brackett and Lawrence Kasdan, based on a
+                story by George Lucas. Produced by Lucasfilm, it is the second film in
+                the Star Wars film series (albeit the fifth chronologically) and the
+                sequel to Star Wars (1977).[a] Set three years after the events of the
+                first film, the Galactic Empire, under the leadership of Darth Vader and
+                the Emperor, pursues Luke Skywalker and the rest of the Rebel Alliance.
+                While Vader relentlessly pursues Luke's friends—Han Solo, Princess Leia,
+                Chewbacca, and C-3PO—Luke studies the Force under Jedi Master Yoda. The
+                ensemble cast includes Mark Hamill, Harrison Ford, Carrie Fisher, Billy
+                Dee Williams, Anthony Daniels, David Prowse, Kenny Baker, Peter Mayhew,
+                and Frank Oz.
+            </p>
+        </div>
+    </div>
+</section>
+{% endblock %}
