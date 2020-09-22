@@ -39,22 +39,18 @@ __Εγκατάσταση στα Windows και Mac__:
   
 __Εγκατάσταση στα Linux__:
 * Στο Linux, μπορείτε να κατεβάσετε το Docker Compose binary από τη σελίδα κυκλοφορίας του Compose repository στο GitHub. Ακολουθήστε τις οδηγίες από το σύνδεσμο, ο οποίος περιλαμβάνει την εκτέλεση της εντολής curl στο τερματικό σας για λήψη των binary αρχείων
-  
-  1) Εκτελέστε αυτήν την εντολή για να κάνετε λήψη της τρέχουσας σταθερής έκδοσης του Docker Compose:
-    
-    * `sudo curl -L "https://github.com/docker/compose/releases/download/1.27.3/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose`
-    
-  2) Εφαρμογή εκτελέσιμων δικαιωμάτων στο binary:
-    
-    * `sudo chmod +x /usr/local/bin/docker-compose`
+
+Εκτελέστε αυτήν την εντολή για να κάνετε λήψη της τρέχουσας σταθερής έκδοσης του Docker Compose:
+* `sudo curl -L "https://github.com/docker/compose/releases/download/1.27.3/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose`
+
+Εφαρμογή εκτελέσιμων δικαιωμάτων στο binary:    
+* `sudo chmod +x /usr/local/bin/docker-compose`
 
 ## InfoCinemas
-1) Εκτελέστε αυτήν την εντολή έτσι ώστε το Docker να δημιουργήσει μια containerized εκδοχή της εφαρμογής μας που θα αλληλεπιδρά με την Mongodb:
-
- * `sudo docker-compose up -d`
+* Εκτελέστε αυτήν την εντολή έτσι ώστε το Docker να δημιουργήσει μια containerized εκδοχή της εφαρμογής μας που θα αλληλεπιδρά με την Mongodb:
+* `sudo docker-compose up -d`
  
-2) Αφού περιμένετε λίγη ώρα προκειμένου το Docker να κατεβάσει τα images και να δημιουργήσει τα container, είστασε έτοιμοι να περιηγηθείτε στην εφαρμογή
-
+* Αφού περιμένετε λίγη ώρα προκειμένου το Docker να κατεβάσει τα images και να δημιουργήσει τα container, είστασε έτοιμοι να περιηγηθείτε στην εφαρμογή
 #### Δυνατότητες απλού χρήστη
 ##### Main Page (0.0.0.0:5000/):
 Η main σελίδα της εφαρμογής μας
@@ -84,6 +80,5 @@ __Εγκατάσταση στα Linux__:
 ##### Make Admin (0.0.0.0:5000/name@gmail.com/makeadmin)
 Σε αυτήν την σελίδα ένας διαχειριστής μπορεί να κάνει έναν άλλον απλό χρήστη διαχειριστή εκχωρώντας τα στοιχεία του άλλου. Ζητούνται email, password
 
-3) Εκτελέστε αυτήν την εντολή έτσι ώστε το Docker να σταματήσει τα container και επομένως την εφαρμογή:
-
- * `sudo docker-compose down`
+* Εκτελέστε αυτήν την εντολή έτσι ώστε το Docker να σταματήσει τα container και επομένως την εφαρμογή: 
+* `sudo docker-compose down`
