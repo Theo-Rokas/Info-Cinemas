@@ -26,24 +26,24 @@ __Εγκατάσταση στα Linux (Ubuntu)__:
   * `sudo apt-get update`
   * `sudo apt install docker-ce`
   
-  ## Docker Compose
+## Docker Compose
   
-  #### Εγκατάσταση Docker Compose
-  ##### Απαιτήσεις συστήματος: 
-  Το Docker Compose βασίζεται στο Docker Engine για οποιαδήποτε σημαντική εργασία, οπότε βεβαιωθείτε ότι έχετε εγκαταστήσει το Docker Engine τοπικά ή απομακρυσμένα
-  * Σε εφαρμογές όπως το Docker Desktop για Mac και Windows, το Docker Compose περιλαμβάνεται ως μέρος αυτών των εγκαταστάσεων.
-  * Σε συστήματα Linux, εγκαταστήστε πρώτα το Docker Engine για το λειτουργικό σας σύστημα όπως περιγράφεται στη σελίδα Get Docker και μετά επιστρέψτε εδώ για οδηγίες σχετικά με την εγκατάσταση σε συστήματα Linux.
+#### Εγκατάσταση Docker Compose
+##### Απαιτήσεις συστήματος: 
+Το Docker Compose βασίζεται στο Docker Engine για οποιαδήποτε σημαντική εργασία, οπότε βεβαιωθείτε ότι έχετε εγκαταστήσει το Docker Engine τοπικά ή απομακρυσμένα
+* Σε εφαρμογές όπως το Docker Desktop για Mac και Windows, το Docker Compose περιλαμβάνεται ως μέρος αυτών των εγκαταστάσεων.
+* Σε συστήματα Linux, εγκαταστήστε πρώτα το Docker Engine για το λειτουργικό σας σύστημα όπως περιγράφεται στη σελίδα Get Docker και μετά επιστρέψτε εδώ για οδηγίες σχετικά με την εγκατάσταση σε συστήματα Linux.
   
-  __Εγκατάσταση στα Windows και Mac__:
-  * Το Docker Desktop για Windows/Mac και το Docker Toolbox περιλαμβάνουν ήδη το Compose μαζί με άλλες εφαρμογές Docker, οπότε οι χρήστες Windows/Mac δεν χρειάζεται να εγκαταστήσουν το Compose ξεχωριστά.
+__Εγκατάσταση στα Windows και Mac__:
+* Το Docker Desktop για Windows/Mac και το Docker Toolbox περιλαμβάνουν ήδη το Compose μαζί με άλλες εφαρμογές Docker, οπότε οι χρήστες Windows/Mac δεν χρειάζεται να εγκαταστήσουν το Compose ξεχωριστά.
   
-  __Εγκατάσταση στα Linux__:
-  * Στο Linux, μπορείτε να κατεβάσετε το Docker Compose binary από τη σελίδα κυκλοφορίας του Compose repository στο GitHub. Ακολουθήστε τις οδηγίες από το σύνδεσμο, ο οποίος περιλαμβάνει την εκτέλεση της εντολής curl στο τερματικό σας για λήψη των binary αρχείων
+__Εγκατάσταση στα Linux__:
+* Στο Linux, μπορείτε να κατεβάσετε το Docker Compose binary από τη σελίδα κυκλοφορίας του Compose repository στο GitHub. Ακολουθήστε τις οδηγίες από το σύνδεσμο, ο οποίος περιλαμβάνει την εκτέλεση της εντολής curl στο τερματικό σας για λήψη των binary αρχείων
   
-    1) Εκτελέστε αυτήν την εντολή για να κάνετε λήψη της τρέχουσας σταθερής έκδοσης του Docker Compose:
+  1) Εκτελέστε αυτήν την εντολή για να κάνετε λήψη της τρέχουσας σταθερής έκδοσης του Docker Compose:
     
-      * `sudo curl -L "https://github.com/docker/compose/releases/download/1.27.3/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose`
+    * `sudo curl -L "https://github.com/docker/compose/releases/download/1.27.3/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose`
     
-    2) Εφαρμογή εκτελέσιμων δικαιωμάτων στο binary:
+  2) Εφαρμογή εκτελέσιμων δικαιωμάτων στο binary:
     
-      * `sudo chmod +x /usr/local/bin/docker-compose`
+    * `sudo chmod +x /usr/local/bin/docker-compose`
